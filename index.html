@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profil Kampung Pangasinan, Kecamatan Karangligar, Kabupaten Karawang – sejarah, potensi, dan informasi lengkap." />
+  <title>Kampung Pangasinan – Kec. Karangligar, Kab. Karawang</title>
+  <style>
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    /* ===== Header / Hero ===== */
+    header {
+      background: linear-gradient(135deg, #1a6b3c 0%, #2ecc71 100%);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(0,0,0,.3);
+      position: relative;
+    }
+    header p.sub {
+      margin-top: 10px;
+      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+      opacity: .9;
+      position: relative;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 18px;
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 30px;
+      padding: 6px 20px;
+      font-size: .85rem;
+      letter-spacing: .5px;
+      position: relative;
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+      background: #fff;
+      border-bottom: 3px solid #1a6b3c;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0 10px;
+    }
+    nav ul li a {
+      display: block;
+      padding: 14px 18px;
+      color: #1a6b3c;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .9rem;
+      transition: color .2s, background .2s;
+    }
+    nav ul li a:hover {
+      color: #fff;
+      background: #1a6b3c;
+    }
+
+    /* ===== Main Layout ===== */
+    main { max-width: 1000px; margin: 40px auto; padding: 0 20px 60px; }
+
+    /* ===== Section ===== */
+    section { margin-bottom: 50px; }
+    section h2 {
+      font-size: 1.55rem;
+      color: #1a6b3c;
+      border-left: 5px solid #2ecc71;
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+
+    /* ===== Cards ===== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+    .card .icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .card h3 { font-size: 1rem; color: #555; margin-bottom: 6px; }
+    .card .value { font-size: 1.4rem; font-weight: 800; color: #1a6b3c; }
+
+    /* ===== Prose box ===== */
+    .prose-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+    }
+    .prose-box p + p { margin-top: 14px; }
+
+    /* ===== Info Table ===== */
+    .info-table { width: 100%; border-collapse: collapse; }
+    .info-table tr:nth-child(odd) { background: #f0faf4; }
+    .info-table td {
+      padding: 12px 16px;
+      border: 1px solid #d9ead3;
+      vertical-align: top;
+      font-size: .95rem;
+    }
+    .info-table td:first-child {
+      font-weight: 700;
+      color: #1a6b3c;
+      width: 38%;
+      white-space: nowrap;
+    }
+
+    /* ===== Potensi list ===== */
+    .potensi-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .potensi-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+      border-top: 4px solid #2ecc71;
+    }
+    .potensi-item h3 { color: #1a6b3c; margin-bottom: 8px; font-size: 1rem; }
+    .potensi-item p { font-size: .9rem; color: #555; }
+
+    /* ===== Map placeholder ===== */
+    .map-wrapper {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    }
+    .map-wrapper iframe {
+      width: 100%;
+      height: 380px;
+      border: 0;
+      display: block;
+    }
+
+    /* ===== Kontak ===== */
+    .kontak-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .kontak-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 22px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .kontak-card .ico { font-size: 1.8rem; flex-shrink: 0; }
+    .kontak-card h3 { font-size: .9rem; color: #888; margin-bottom: 4px; }
+    .kontak-card p { font-size: .95rem; font-weight: 600; color: #333; }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #1a6b3c;
+      color: rgba(255,255,255,.85);
+      text-align: center;
+      padding: 24px 20px;
+      font-size: .88rem;
+    }
+    footer a { color: #7fff9e; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <h1>🌾 Kampung Pangasinan</h1>
+  <p class="sub">Kecamatan Karangligar &nbsp;·&nbsp; Kabupaten Karawang &nbsp;·&nbsp; Jawa Barat</p>
+  <span class="badge">🇮🇩 Desa Asri, Masyarakat Sejahtera</span>
+</header>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <ul>
+    <li><a href="#profil">Profil</a></li>
+    <li><a href="#sejarah">Sejarah</a></li>
+    <li><a href="#statistik">Statistik</a></li>
+    <li><a href="#potensi">Potensi</a></li>
+    <li><a href="#pemerintahan">Pemerintahan</a></li>
+    <li><a href="#lokasi">Lokasi</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<main>
+
+  <!-- PROFIL -->
+  <section id="profil">
+    <h2>Profil Kampung</h2>
+    <div class="prose-box">
+      <p>
+        <strong>Kampung Pangasinan</strong> adalah salah satu kampung yang berada di wilayah
+        <strong>Kecamatan Karangligar, Kabupaten Karawang, Provinsi Jawa Barat</strong>.
+        Kampung ini dikenal dengan suasana pedesaan yang asri, mayoritas warganya bermata
+        pencaharian sebagai petani, dan memiliki ikatan sosial kemasyarakatan yang kuat
+        berdasarkan nilai-nilai gotong royong.
+      </p>
+      <p>
+        Nama <em>Pangasinan</em> dipercaya berasal dari kata dalam bahasa Sunda yang berkaitan
+        dengan tradisi dan kebiasaan lokal turun-temurun masyarakatnya. Kampung ini berbatasan
+        langsung dengan wilayah persawahan yang subur serta jaringan irigasi yang mendukung
+        produktivitas pertanian sepanjang tahun.
+      </p>
+      <p>
+        Letaknya yang strategis di Kecamatan Karangligar menjadikan Kampung Pangasinan mudah
+        dijangkau dari pusat kota Karawang maupun jalur lintas provinsi, sehingga akses
+        terhadap fasilitas pendidikan, kesehatan, dan ekonomi semakin terbuka bagi seluruh warga.
+      </p>
+    </div>
+  </section>
+
+  <!-- IDENTITAS SINGKAT -->
+  <section id="identitas">
+    <h2>Identitas Wilayah</h2>
+    <div class="prose-box">
+      <table class="info-table">
+        <tr><td>Nama Kampung</td><td>Pangasinan</td></tr>
+        <tr><td>Kecamatan</td><td>Karangligar</td></tr>
+        <tr><td>Kabupaten</td><td>Karawang</td></tr>
+        <tr><td>Provinsi</td><td>Jawa Barat</td></tr>
+        <tr><td>Negara</td><td>Indonesia</td></tr>
+        <tr><td>Kode Pos</td><td>41374</td></tr>
+        <tr><td>Luas Wilayah</td><td>± 150 ha (sawah, permukiman, fasilitas umum)</td></tr>
+        <tr><td>Topografi</td><td>Dataran rendah, ketinggian ± 10–30 m dpl</td></tr>
+        <tr><td>Jenis Tanah</td><td>Alluvial – subur untuk pertanian</td></tr>
+        <tr><td>Sumber Air Utama</td><td>Irigasi teknis Citarum &amp; sumur warga</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- SEJARAH -->
+  <section id="sejarah">
+    <h2>Sejarah Kampung</h2>
+    <div class="prose-box">
+      <p>
+        Menurut tutur lisan yang berkembang di masyarakat, Kampung Pangasinan telah ada sejak
+        beberapa abad yang lalu, bersamaan dengan berkembangnya permukiman di sepanjang aliran
+        Sungai Citarum dan saluran irigasinya. Para leluhur kampung ini sebagian besar adalah
+        petani yang memanfaatkan lahan subur di kawasan utara Karawang sebagai sumber
+        penghidupan utama.
+      </p>
+      <p>
+        Pada masa kolonial Belanda, kawasan Karangligar — termasuk Kampung Pangasinan — menjadi
+        salah satu lumbung padi penting yang menyokong kebutuhan beras di wilayah Batavia dan
+        sekitarnya. Sistem irigasi yang dibangun pada era itu sebagian masih berfungsi hingga
+        kini dan menjadi tulang punggung pertanian lokal.
+      </p>
+      <p>
+        Pasca kemerdekaan Indonesia, kampung ini terus berkembang seiring dengan program
+        pembangunan desa yang digalakkan pemerintah. Berbagai infrastruktur dasar seperti
+        jalan desa, sekolah, masjid, dan polindes mulai dibangun secara bertahap, meningkatkan
+        taraf hidup masyarakat dari generasi ke generasi.
+      </p>
+    </div>
+  </section>
+
+  <!-- STATISTIK -->
+  <section id="statistik">
+    <h2>Statistik Kampung</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>Jumlah Penduduk</h3>
+        <div class="value">± 2.500</div>
+        <small>jiwa</small>
+      </div>
+      <div class="card">
+        <div class="icon">🏠</div>
+        <h3>Jumlah KK</h3>
+        <div class="value">± 700</div>
+        <small>kepala keluarga</small>
+      </div>
+      <div class="card">
+        <div class="icon">🌾</div>
+        <h3>Lahan Pertanian</h3>
+        <div class="value">± 100 ha</div>
+        <small>sawah produktif</small>
+      </div>
+      <div class="card">
+        <div class="icon">🕌</div>
+        <h3>Tempat Ibadah</h3>
+        <div class="value">3</div>
+        <small>masjid &amp; mushola</small>
+      </div>
+      <div class="card">
+        <div class="icon">🏫</div>
+        <h3>Sekolah</h3>
+        <div class="value">2</div>
+        <small>SD / MI</small>
+      </div>
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>Fasilitas Kesehatan</h3>
+        <div class="value">1</div>
+        <small>posyandu &amp; polindes</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- POTENSI -->
+  <section id="potensi">
+    <h2>Potensi Kampung</h2>
+    <div class="potensi-list">
+      <div class="potensi-item">
+        <h3>🌾 Pertanian Padi</h3>
+        <p>
+          Lahan sawah yang luas dengan sistem irigasi teknis menjadikan Kampung Pangasinan
+          sebagai salah satu penghasil padi berkualitas di Kecamatan Karangligar, dengan
+          dua kali panen dalam setahun.
+        </p>
+      </div>
+      <div class="potensi-item">
+        <h3>🐟 Perikanan Air Tawar</h3>
+        <p>
+          Kolam ikan dan keramba di saluran irigasi dikelola warga untuk budidaya ikan mas,
+          lele, dan nila sebagai sumber protein lokal sekaligus tambahan penghasilan keluarga.
+        </p>
+      </div>
+      <div class="potensi-item">
+        <h3>🥥 Perkebunan Rakyat</h3>
+        <p>
+          Kelapa, pisang, dan tanaman hortikultura ditanam di pekarangan warga, menambah
+          keragaman komoditas pertanian dan mendukung ketahanan pangan kampung.
+        </p>
+      </div>
+      <div class="potensi-item">
+        <h3>🏺 Kerajinan Tangan</h3>
+        <p>
+          Sejumlah warga mengembangkan kerajinan anyaman bambu dan gerabah yang dipasarkan
+          ke pasar tradisional di Karawang, memanfaatkan bahan baku lokal yang melimpah.
+        </p>
+      </div>
+      <div class="potensi-item">
+        <h3>🌿 Wisata Alam Desa</h3>
+        <p>
+          Hamparan sawah hijau dan suasana pedesaan yang tenang berpotensi dikembangkan
+          menjadi destinasi agrowisata atau wisata edukasi pertanian bagi pengunjung dari
+          perkotaan.
+        </p>
+      </div>
+      <div class="potensi-item">
+        <h3>🤝 Koperasi &amp; UMKM</h3>
+        <p>
+          Kelompok tani dan unit usaha kecil menengah warga didukung oleh koperasi simpan
+          pinjam kampung yang membantu permodalan dan pemasaran produk lokal.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEMERINTAHAN -->
+  <section id="pemerintahan">
+    <h2>Pemerintahan</h2>
+    <div class="prose-box">
+      <p>
+        Kampung Pangasinan berada di bawah koordinasi pemerintah desa di wilayah Kecamatan
+        Karangligar. Struktur pemerintahan kampung dijalankan melalui sistem rukun warga (RW)
+        dan rukun tetangga (RT) yang aktif menggerakkan program pembangunan dan pelayanan
+        masyarakat.
+      </p>
+      <table class="info-table" style="margin-top:16px;">
+        <tr><td>Kecamatan</td><td>Karangligar</td></tr>
+        <tr><td>Kepala Kecamatan</td><td>Pejabat Kecamatan Karangligar</td></tr>
+        <tr><td>Jumlah RW</td><td>± 3 RW</td></tr>
+        <tr><td>Jumlah RT</td><td>± 10 RT</td></tr>
+        <tr><td>Lembaga Aktif</td><td>PKK, Karang Taruna, Kelompok Tani, Posyandu</td></tr>
+        <tr><td>Program Prioritas</td><td>Peningkatan infrastruktur, ketahanan pangan, pemberdayaan perempuan</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- BUDAYA & TRADISI -->
+  <section id="budaya">
+    <h2>Budaya &amp; Tradisi</h2>
+    <div class="prose-box">
+      <p>
+        Warga Kampung Pangasinan mayoritas beragama Islam dan menjunjung tinggi nilai-nilai
+        keislaman yang berpadu harmonis dengan budaya Sunda. Berbagai tradisi lokal masih
+        dijaga kelestariannya, antara lain:
+      </p>
+      <ul style="margin: 14px 0 0 20px; display: grid; gap: 8px;">
+        <li><strong>Sedekah Bumi</strong> – syukuran setelah musim panen sebagai ungkapan rasa syukur atas hasil bumi yang melimpah.</li>
+        <li><strong>Ngalungsur / Helaran</strong> – arak-arakan tradisi menjelang hari besar keagamaan yang melibatkan seluruh warga.</li>
+        <li><strong>Ngaleut</strong> – kegiatan gotong royong membersihkan saluran irigasi sebelum musim tanam.</li>
+        <li><strong>Pengajian Rutin</strong> – majelis taklim ibu-ibu dan bapak-bapak yang aktif setiap minggu di masjid kampung.</li>
+        <li><strong>Kenduri / Selamatan</strong> – syukuran untuk berbagai momen penting seperti kelahiran, pernikahan, dan khitanan.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LOKASI & PETA -->
+  <section id="lokasi">
+    <h2>Lokasi &amp; Peta</h2>
+    <div class="prose-box" style="margin-bottom:16px;">
+      <table class="info-table">
+        <tr><td>Kecamatan</td><td>Karangligar</td></tr>
+        <tr><td>Kabupaten</td><td>Karawang, Jawa Barat</td></tr>
+        <tr><td>Jarak ke Pusat Kota Karawang</td><td>± 25 km</td></tr>
+        <tr><td>Akses Jalan</td><td>Jalan kabupaten aspal, dapat dilalui kendaraan roda 4</td></tr>
+        <tr><td>Transportasi Umum</td><td>Angkutan pedesaan &amp; ojek</td></tr>
+      </table>
+    </div>
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15855.31!2d107.28!3d-6.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6990000000001%3A0x0!2sKarangligar%2C+Karawang%2C+West+Java!5e0!3m2!1sen!2sid!4v1"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Peta Kecamatan Karangligar, Karawang">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak">
+    <h2>Kontak &amp; Informasi</h2>
+    <div class="kontak-grid">
+      <div class="kontak-card">
+        <div class="ico">📍</div>
+        <div>
+          <h3>Alamat</h3>
+          <p>Kampung Pangasinan, Kec. Karangligar, Kab. Karawang, Jawa Barat 41374</p>
+        </div>
+      </div>
+      <div class="kontak-card">
+        <div class="ico">🏢</div>
+        <div>
+          <h3>Kantor Kecamatan</h3>
+          <p>Kecamatan Karangligar, Kabupaten Karawang</p>
+        </div>
+      </div>
+      <div class="kontak-card">
+        <div class="ico">📞</div>
+        <div>
+          <h3>Telepon Kecamatan</h3>
+          <p>(0267) — Kecamatan Karangligar</p>
+        </div>
+      </div>
+      <div class="kontak-card">
+        <div class="ico">🌐</div>
+        <div>
+          <h3>Website</h3>
+          <p><a href="https://pangasinan.me" style="color:#1a6b3c;">pangasinan.me</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>
+    &copy; 2024 Kampung Pangasinan &nbsp;·&nbsp; Kec. Karangligar, Kab. Karawang, Jawa Barat
+    &nbsp;·&nbsp; <a href="https://pangasinan.me">pangasinan.me</a>
+  </p>
+  <p style="margin-top:6px; font-size:.82rem; opacity:.7;">
+    Dibangun dengan 💚 untuk warga Kampung Pangasinan
+  </p>
+</footer>
+
+</body>
+</html>
